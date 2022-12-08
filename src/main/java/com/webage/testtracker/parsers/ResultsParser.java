@@ -26,12 +26,11 @@ public class ResultsParser {
         String[] row = null;
         while ((row = reader.readNext()) != null) {
 
-          Student student = new Student();
-
-          student.setName(row[0]);
-          student.setEmail(row[1]);
-          student.setScore(Integer.parseInt(row[2]));
-          student.setAnswers(Arrays.copyOfRange(row, 3, row.length-1));
+          Student student = new Student(
+                                  row[0],
+                                  row[1],
+                                  Integer.parseInt(row[2]),
+                                  Arrays.copyOfRange(row, 3, row.length));
 
           results.addStudent(student);
         }
