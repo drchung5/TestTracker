@@ -14,8 +14,16 @@ public class Results {
     questions.add(question);
   }
 
+  public ArrayList<String> getQuestions() {
+    return questions;
+  }
+
   public void addStudent(Student student) {
     students.add(student);
+  }
+
+  public ArrayList<Student> getStudents() {
+    return students;
   }
 
   @Override

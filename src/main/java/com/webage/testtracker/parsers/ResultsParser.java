@@ -30,7 +30,7 @@ public class ResultsParser {
                                   row[0],
                                   row[1],
                                   Integer.parseInt(row[2]),
-                                  Arrays.copyOfRange(row, 3, row.length));
+                                  Arrays.asList(Arrays.copyOfRange(row, 3, row.length)));
 
           results.addStudent(student);
         }

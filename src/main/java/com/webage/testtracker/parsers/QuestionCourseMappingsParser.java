@@ -1,8 +1,10 @@
 package com.webage.testtracker.parsers;
 
 import com.opencsv.CSVReader;
+import com.webage.testtracker.model.Course;
 import com.webage.testtracker.model.Mappings;
 import com.webage.testtracker.model.QuestionCourseMapping;
+import com.webage.testtracker.utilities.ASCIITrim;
 
 import java.io.FileReader;
 import java.util.Arrays;
@@ -20,18 +22,14 @@ public class QuestionCourseMappingsParser {
       String[] row = null;
       while ((row = reader.readNext()) != null) {
 
-        QuestionCourseMapping mapping = new QuestionCourseMapping();
+        // The ASCIITrim.trim() function here is a kludge for some reason
+        // when reading the question to course mapping file the first
+        // character is ASCII(65279) 'ZERO WIDTH NO-BREAK SPACE'
+        // I am not sure why it appears only in this file
+        // All of the CSV files are exported directly from Excel and no
+        // other file appears to have this problem
 
-        mapping.setCourseUrl(row[0]);
-        mapping.setCourseTitle(row[1]);
-
-        for( int i = 2; i < row.length; i++ ) {
-          if (row[i].length() != 0) {
-            mapping.addQuestion(row[i]);
-          }
-        }
-
-        mappings.addMapping(mapping);
+        mappings.addMapping(row[2],new Course(ASCIITrim.trim(row[0]),row[1]));
       }
 
     } catch (Exception e) {

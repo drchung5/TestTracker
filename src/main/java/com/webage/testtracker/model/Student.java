@@ -1,16 +1,19 @@
 package com.webage.testtracker.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 
   private String name;
   private String email;
   private int score;
-  private String[] answers = new String[]{};
+  private List<String> answers = new ArrayList<>();
 
   public Student() {
   }
 
-  public Student(String name, String email, int score, String[] answers) {
+  public Student(String name, String email, int score, List<String> answers) {
     this.name = name;
     this.email = email;
     this.score = score;
@@ -46,7 +49,7 @@ public class Student {
     return score;
   }
 
-  public String[] getAnswers() {
+  public List<String> getAnswers() {
     return answers;
   }
 

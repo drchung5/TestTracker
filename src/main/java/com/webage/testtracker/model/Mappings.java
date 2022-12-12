@@ -1,13 +1,19 @@
 package com.webage.testtracker.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Mappings {
 
-  private ArrayList<QuestionCourseMapping> mappings = new ArrayList<>();
+  private Map<String,Course> courseMappings = new HashMap<>();
 
-  public void addMapping( QuestionCourseMapping mapping ) {
-    mappings.add(mapping);
+  public void addMapping( String question, Course course ) {
+    courseMappings.put(question,course);
+  }
+
+  public Course getCourse(String question) {
+    return courseMappings.get(question);
   }
 
   @Override
@@ -15,12 +21,14 @@ public class Mappings {
 
     StringBuilder builder = new StringBuilder();
 
-    for( QuestionCourseMapping mapping : mappings ) {
+    builder.append("\n----------------\n\n");
 
-      builder.append("--------------------------\n\n");
-      builder.append(mapping);
-      builder.append("\n\n");
-
+    for(Map.Entry<String,Course> entry: courseMappings.entrySet()) {
+      builder.append(String.format(
+          "%-20s %-20s  %s\n",
+          entry.getValue().getCourseTitle(),
+          entry.getValue().getCourseUrl(),
+          entry.getKey()));
     }
 
     return builder.toString();

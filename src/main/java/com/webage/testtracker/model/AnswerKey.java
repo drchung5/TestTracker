@@ -11,6 +11,10 @@ public class AnswerKey {
     keys.put(question,answer);
   }
 
+  public Map<String,String> getKeys() {
+    return keys;
+  }
+
   @Override
   public String toString() {
 
@@ -21,6 +25,7 @@ public class AnswerKey {
     for(Map.Entry<String,String> entry: keys.entrySet()) {
       builder.append(String.format("%-2s %s\n", entry.getValue(), entry.getKey()));
     }
+
     return builder.toString();
   }
 }
