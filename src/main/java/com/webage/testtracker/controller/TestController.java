@@ -5,6 +5,7 @@ import com.webage.testtracker.model.*;
 import com.webage.testtracker.parsers.*;
 import com.webage.testtracker.utilities.RecommendationWriter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TestController {
@@ -20,24 +21,15 @@ public class TestController {
     TopicArticleMap topicArticleMap = TopicArticleMapParser.parseTopicArticleMap(topicArticleMapFilePath);
     TopicCourseMap topicCourseMap   = TopicCourseMapParser.parseTopicCourseMap(topicCourseMapFilePath);
 
-    ResultsAnalyzer.getInstance().getRecommendations(
+    List<Recommendation> recommendations = ResultsAnalyzer.getInstance().getRecommendations(
                                                   results,
                                                   answerTopicKey,
                                                   topicArticleMap,
                                                   topicCourseMap);
 
 
-//    List<Recommendation> recommendations = ResultsAnalyzer.getRecommendations(results,mappings, answerTopicKey,70);
-//
-//    RecommendationWriter.write(recommendations);
+    RecommendationWriter.write(recommendations);
 
-//    System.out.println(results);
-//    System.out.println(mappings);
-//    System.out.println(answerKey);
-//
-//    for( Recommendation recommendation : recommendations ) {
-//      System.out.println(recommendation);
-//    }
 
   }
 

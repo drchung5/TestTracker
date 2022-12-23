@@ -1,9 +1,6 @@
 package com.webage.testtracker.analyzer;
 
 import com.webage.testtracker.model.*;
-import com.webage.testtracker.parsers.AnswerTopicKeyParser;
-import com.webage.testtracker.parsers.ResultsParser;
-import com.webage.testtracker.parsers.TopicArticleMapParser;
 
 import java.util.*;
 
@@ -32,6 +29,8 @@ public class ResultsAnalyzer {
                                     TopicArticleMap topicArticleMap,
                                     TopicCourseMap topicCourseMap) {
 
+    List<Recommendation> recommendations = new ArrayList<>();
+
     this.results = results;
     this.answerTopicKey = answerTopicKey;
     this.topicArticleMap = topicArticleMap;
@@ -46,18 +45,23 @@ public class ResultsAnalyzer {
 
       for(int i = 1; i < scores.length; i++) {
         if(scores[i] < TOPIC_THRESHOLD) {
-          recommendation.addTopic(topicArticleMap.topics.get(i-1));
+
+          // in these two lines of code studyMaterials.get() is List.get() and is zero-based
+          // topicCourseMap.getCourse() is a custom method and is one-based
+          recommendation.addStudyMaterial(topicArticleMap.studyMaterials.get(i-1));
+          recommendation.addCourse(topicCourseMap.getCourse(i));
+
         }
       }
 
-      System.out.println(recommendation.toString());
+      recommendations.add(recommendation);
+
     }
 
-    return null;
+    return recommendations;
   }
 
   // calculate score and topic scores
-  // return value
   private int[] calculateScores(Student student) {
 
     List<String> questions = results.getQuestions();

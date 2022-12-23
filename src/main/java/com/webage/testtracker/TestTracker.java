@@ -15,35 +15,26 @@ public class TestTracker {
 
   public static void main(String[] argv ) {
 
-//    new UserInterface();
+    new UserInterface();
 
 //    Results results = ResultsParser.ParseResults("../results.csv");
-//    AnswerTopicKey answerTopicKey = AnswerTopicKeyParser.parseAnswerTopicKey("../answer-topic-key.csv");
-//    TopicCourseMap topicCourseMap = TopicCourseMapParser.parseTopicCourseMap("../topic-course-map.json");
-//    TopicArticleMap topicArticleMap = TopicArticleMapParser.parseTopicArticleMap("../topic-article-map.json");
-
-    TestController.processResults(
-                          "../results.csv",
-                          "../answer-topic-key.csv",
-                          "../topic-article-map.json",
-                          "../topic-course-map.json");
-
-//    System.out.println(answerTopicKey);
 //    System.out.println(results);
+
+//    AnswerTopicKey answerTopicKey = AnswerTopicKeyParser.parseAnswerTopicKey("../answer-topic-key.csv");
+//    System.out.println(answerTopicKey);
+
+//    TopicCourseMap topicCourseMap = TopicCourseMapParser.parseTopicCourseMap("../topic-course-map.json");
 //    System.out.println(topicCourseMap);
+
+//    TopicArticleMap topicArticleMap = TopicArticleMapParser.parseTopicArticleMap("../topic-article-map.json");
 //    System.out.println(topicArticleMap);
 
+//    TestController.processResults(
+//                          "../results.csv",
+//                          "../answer-topic-key.csv",
+//                          "../topic-article-map.json",
+//                          "../topic-course-map.json");
 
-//
-//    List<Recommendation> recommendations = ResultsAnalyzer.getRecommendations(results,mappings,answerKey,70);
-//
-//    System.out.println(results);
-//    System.out.println(mappings);
-//    System.out.println(answerTopicKey);
-
-//    for( Recommendation recommendation : recommendations ) {
-//      System.out.println(recommendation);
-//    }
 
   }
 
