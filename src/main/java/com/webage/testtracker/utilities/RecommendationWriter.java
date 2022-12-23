@@ -15,7 +15,7 @@ public class RecommendationWriter {
     String fileName = LocalDateTime.now()+"recomendations.txt";
 
     File outputFile = new File(fileName);
-    System.out.println(outputFile.getAbsolutePath());
+    System.out.println("Recommendation File: " + outputFile.getAbsolutePath());
     try(FileWriter writer = new FileWriter(outputFile, false)) {
 
       for( Recommendation recommendation : recommendations ) {
