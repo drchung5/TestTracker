@@ -1,0 +1,98 @@
+{"courses":[
+  {
+    "topicNumbers": [1,2,3],
+    "name" : "HTTP Fundamentals by Scott Allen",
+    "url" : "https://app.pluralsight.com/library/courses/xhttp-fund/table-of-contents",
+    "modules" : [
+      {
+        "name" : "HTTP Resources",
+        "url" : "https://app.pluralsight.com/course-player?clipId=e59bcd4e-a552-4f17-ba7d-37f6d774d135",
+        "duration" : "29 min"
+      },
+      {
+        "name" : "HTTP Messages",
+        "url" : "https://app.pluralsight.com/course-player?clipId=16449f3b-7632-45ec-85ec-03f87aa6e379",
+        "duration" : "39 min"
+      }
+    ]
+  },
+  {
+    "topicNumbers": [4],
+      "name" : "JavaScript Getting Started by Mark Zamoyta",
+      "url" : "https://app.pluralsight.com/library/courses/javascript-getting-started",
+      "modules" : [
+        {
+          "name" : "Types and Operators",
+          "url" : "https://app.pluralsight.com/course-player?clipId=183ef984-e14e-4915-9a1f-da1724ed27ff",
+          "duration" : "35 min"
+        }
+      ]
+  },
+  {
+    "topicNumbers": [5],
+      "name" : "JavaScript Getting Started by Mark Zamoyta",
+      "url" : "https://app.pluralsight.com/library/courses/javascript-getting-started",
+      "modules" : [
+        {
+          "name" : "Types and Operators",
+          "url" : "https://app.pluralsight.com/course-player?clipId=183ef984-e14e-4915-9a1f-da1724ed27ff",
+          "duration" : "35 min"
+        }
+      ]
+    
+  },
+  {
+    "topicNumbers": [6],
+      "name" : "JavaScript Getting Started by Mark Zamoyta",
+      "url" : "https://app.pluralsight.com/library/courses/javascript-getting-started",
+      "modules" : [
+        {
+          "name" : "Variables and Constants",
+          "url" : "https://app.pluralsight.com/course-player?clipId=52d9042d-5a00-4e85-8333-32e2b4da9e5e",
+          "duration" : "26 min"
+        }
+      ]
+  },
+  {
+    "topicNumbers": [7],
+      "name" : "JavaScript Getting Started by Mark Zamoyta",
+      "url" : "https://app.pluralsight.com/library/courses/javascript-getting-started",
+      "modules" : [
+        {
+          "name" : "JavaScript Looping",
+          "url" : "https://app.pluralsight.com/course-player?clipId=a45feaee-f203-4054-bfb3-4b4aa6104363",
+          "duration" : "33 min"
+        }
+      ]
+  },
+  {
+    "topicNumbers": [8],
+      "name" : "JavaScript Getting Started by Mark Zamoyta",
+      "url" : "https://app.pluralsight.com/library/courses/javascript-getting-started",
+      "modules" : [
+        {
+          "name" : "Program Flow",
+          "url" : "https://app.pluralsight.com/course-player?clipId=a45feaee-f203-4054-bfb3-4b4aa6104363",
+          "duration" : "33 min"
+        }
+      ]
+  },
+  {
+    "topicNumbers": [9],
+      "name" : "Getting Started with the Linux Command Line by David Clinton",
+      "url" : "https://app.pluralsight.com/library/courses/getting-started-linux-command-line",
+      "modules" : [
+        {
+          "name" : "Working with Linux Command Line Basics",
+          "url" : "https://app.pluralsight.com/course-player?clipId=a7173eb6-50a7-484f-9201-d0eeecc7bfc8",
+          "duration" : "16 min"
+        },
+        {
+          "name" : "Navigating the Linux File System",
+          "url" : " **** LINK IS BROKEN ********",
+          "duration" : "20 min"
+        }
+      ]
+  }
+]
+}

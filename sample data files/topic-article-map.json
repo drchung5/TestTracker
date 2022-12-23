@@ -1,0 +1,153 @@
+{"studyMaterials":[
+  {
+    "number":1,
+    "name":"HTTP Request & Response",
+    "articles": [
+      {
+        "name": "What is HTTP",
+        "url": "https://www.w3schools.com/whatis/whatis_http.asp",
+        "duration": "2 min"
+      },
+      {
+        "name": "Basic Aspects of HTTP",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#basic_aspects_of_http",
+        "duration": "10 min"
+      },
+      {
+        "name": "HTTP Messages",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages",
+        "duration": "6 min"
+      }
+    ]
+  },
+  {
+    "number":2,
+    "name":"Passing Parameters in HTTP Requests",
+    "articles": [
+      {
+        "name": "Query String Parameters",
+        "url": "https://launchschool.com/books/http/read/what_is_a_url#querystringsparameters",
+        "duration": "3 min"
+      }
+    ]
+  },
+  {
+    "number":3,
+    "name":"HTTP Response Data",
+    "articles": [
+      {
+        "name": "HTTP Responses",
+        "url": "https://www.tutorialspoint.com/http/http_responses.htm",
+        "duration": "3 min"
+      },
+      {
+        "name": "HTTP Status Codes",
+        "url": "https://www.tutorialspoint.com/http/http_status_codes.htm",
+        "duration": "4 min"
+      }
+    ]
+  },
+  {
+    "number":4,
+    "name":"JavaScript Data Types",
+    "articles": [
+      {
+        "name": "JavaScript Data Types and Structures",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures",
+        "duration": "15 min"
+      }
+    ]
+  },
+  {
+    "number":5,
+    "name":"JavaScript Operators",
+    "articles": [
+      {
+        "name": "JavaScript Operators",
+        "url": "https://www.w3schools.com/js/js_operators.asp",
+        "duration": "3 min"
+      }
+    ]
+  },
+  {
+    "number":6,
+    "name":"JavaScript Creating Variables",
+    "articles": [
+      {
+        "name": "JavaScript Variables",
+        "url": "https://javascript.info/variables",
+        "duration": "9 min"
+      },
+      {
+        "name": "JavaScript Literals",
+        "url": " **** LINK IS BROKEN ********",
+        "duration": "2 min"
+      }
+    ]
+  },
+  {
+    "number":7,
+    "name":"JavaScript Looping",
+    "articles": [
+      {
+        "name": "JavaScript Variables",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+        "duration": "9 min"
+      }
+    ]
+  },
+  {
+    "number":8,
+    "name":"JavaScript Decision Constructs",
+    "articles": [
+      {
+        "name": "JavaScript if, else & else if",
+        "url": "https://www.w3schools.com/js/js_if_else.asp",
+        "duration": "4 min"
+      },
+      {
+        "name": "JavaScript Switch Statement",
+        "url": "https://www.w3schools.com/js/js_switch.asp",
+        "duration": "3 min"
+      },
+      {
+        "name": "JavaScript Ternary Operator",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator",
+        "duration": "2 min"
+      }
+    ]
+  },
+  {
+    "number":9,
+    "name":"Linux OS - Command Line Basics",
+    "articles": [
+      {
+        "name": "A guide to the Linux terminal for beginners",
+        "url": "https://opensource.com/article/21/8/linux-terminal",
+        "duration": "5 min"
+      },
+      {
+        "name": "Linux Command Line Cheat Sheet",
+        "url": "https://cheatography.com/davechild/cheat-sheets/linux-command-line/",
+        "duration": "NA"
+      }
+    ]
+  },
+  {
+    "number":10,
+    "name":"Windows OS - Command Line Basics",
+    "articles": [
+      {
+        "name": "Windows Command Prompt in 15 Min",
+        "url": "https://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html",
+        "duration": "14 min"
+      },
+      {
+        "name": "Windows Command Prompt Cheat Sheet",
+        "url": "http://www.cs.columbia.edu/~sedwards/classes/2015/1102-fall/Command%20Prompt%20Cheatsheet.pdf",
+        "duration": "NA"
+      }
+    ]
+  }
+
+  ]}

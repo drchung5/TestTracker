@@ -1,0 +1,1135 @@
+Travelers - Software Engineering Associate Program - Pre Assessment 2022-12-12
+
+Student link:
+https://www.proprofs.com/quiz-school/ugc/story.php?title=travelers-software-engineering-associate-program-pre-assessment-20221212hl
+
+*****DO NOT SHARE***************
+
+Stats: https://www.proprofs.com/quiz-school/stats.php?title=travelers-software-engineering-associate-program-pre-assessment-20221212hl&stat-shr-id=979e729e5d79089448b1b36453e1b9a6
+
+Results:
+https://www.proprofs.com/quiz-school/report.php?title=travelers-software-engineering-associate-program-pre-assessment-20221212hl&show=score-reports&shr-id=979e729e5d79089448b1b36453e1b9a6
+ 
+********************************
+
+ 
+ 
+Question Set 12/14/2022 Version 2.0
+ 
+## questions for
+Company: Travelers 
+Program: Software Engineering Associate Program
+TypeOfTest [pre/post|assessment|quiz]
+Author: mpawlowski
+Date: 12/14/2022
+
+ 
+Topic	 # of
+ Questions
+HTTP Request & Response	7
+Passing Parameters in HTTP Requests	7
+HTTP Response Data	7
+JavaScript Language Basics - Data Types	7
+JavaScript Language Basics - Operators	7
+JavaScript Language Basics - Creating Variables	7
+JavaScript Language Basics - Looping	7
+JavaScript Language Basics - Decision constructs	7
+Linux OS - Command Line Proficiency	7
+Windows OS - Command Line Proficiency 	7
+TOTAL	70
+
+## Questions For 
+Topic: HTTP Request & Response
+
+Topic: HTTP
+Sub-Topic: Request
+Q:01
+Text: Which of the statements below is NOT true of HTTP requests?
+A:
+1) An HTTP request line is required
+2) HTTP headers are not required
+* 3) An HTTP body section is required
+4) HTTP Requests can include carriage returns
+
+
+Topic: HTTP
+Sub-Topic: Request
+Q:02
+Text: What is wrong with the HTTP request below?
+
+GET /index.html HTTP/1.1
+User-Agent: Mozilla/4.0 
+Host: www.mycompany.com
+Content-Type: image/jpeg
+
+A:
+* 1) Content-Type is not needed when making GET requests
+2) The request comes from a non-standard browser
+3) HTTP/1.1 is an obsolete version of HTTP
+4) There should be no forward slash in front of the URL ("/index.html")
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:03
+Text: You make a request in JavaScript for customer data from a RESTful web service. Which one of the following headers would you include with the request?
+A:
+* 1) Accept: application/json
+2) Accept: text/html
+3) Accept: JSON
+4) Accept: application/xml
+5) None of the above answers are appropriate
+
+Topic: HTTP
+Sub-Topic: Request
+Q:04
+Text: Which of the following is NOT an HTTP request type?
+A:
+1) GET
+2) PUT
+3) POST 
+* 4) UPDATE
+5) DELETE
+
+Topic: HTTP
+Sub-Topic: Response
+Q:05
+Text: How can you tell when a server error has occured in response to an HTTP request?
+A:
+1) The request times out before returning a response.
+2) The response carries the following header: Server-State:Failed
+3) The response carries the following header: Status: Server Failure
+* 4) The response's Status field contains a value in the range: 500-599
+5) The response's Error field contains a value in the range: 400-499
+
+ 
+Topic: HTTP
+Sub-Topic: Request
+Q:06
+Text: Which HTTP request type is executed when a user clicks on an anchor tag on a web page?
+A:
+* 1) GET
+2) PUT
+3) POST 
+4) TRACE
+5) DELETE
+
+ 
+Topic: HTTP
+Sub-Topic: Request
+Q:07
+Text: Which one of the items below is not required as part of a standard HTTP GET request?
+A:
+1) HTTP version
+* 2) Request Body
+3) Request Type 
+4) URL
+
+
+
+
+## Questions For 
+Topic: Passing Parameters in HTTP Requests
+
+Topic: HTTP Requests
+Sub-Topic: Passing Parameters
+Q:01
+Text: You are sending an HTTP request to a web service. The web service requires you to pass a name as a query parameter on the URL. Which of the following URLs displays the correct format?
+A:
+1) http://servername/resource:name=steve
+* 2) http://servername/resource?name=steve
+3) http://servername/resource:name?steve
+4) http://servername/resource?name:steve
+
+
+Topic: HTTP Requests
+Sub-Topic: Passing Parameters
+Q:02
+Text: When making an HTTP request you pass the parameter name=pam on the URL. Which header is required?  
+A:
+1) Accept: parameter/url
+2) Length: 8
+3) Parameters: true
+4) Param-Type: text/query
+* 5) No header is required when passing parameters on the URL
+
+
+Topic: HTTP Requests
+Sub-Topic: Passing Data
+Q:03
+Text: You are making an HTTP request that uploads data to a web service. Which of the following would you NOT expect to use in the request  
+A:
+1) The Body: {"name": "jackson"}
+2) The header: Content-Length: 19
+3) The header: Content: application/json
+* 4) The request type: GET
+5) All of the above are appropriate for uploading of data 
+
+
+Topic: HTTP Requests
+Sub-Topic: Passing Data
+Q:04
+Text: You are making an HTTP request that inserts or updates data on a web service. Which of the following request types could be used?  
+A:
+1) GET and POST request types are used to insert and update data. 
+2) POST and DELETE request types are used to insert and update data. 
+* 3) POST and PUT request types are used to insert and update data. 
+4) POST and DELETE request types are used to insert and update data. 
+
+
+Topic: HTTP Requests
+Sub-Topic: Passing Data
+Q:05
+Text: When uploading data via an HTTP request, only data in human readable should be uploaded in the request body.  True or False?
+A:
+1) True 
+* 2) False
+
+
+Topic: HTTP Requests
+Sub-Topic: Passing Parameters
+Q:06
+Text: You are making an HTTP POST request that inserts or updates data on a secured web service. How would you send the credentials/auth-token?  
+A:
+1) Add the credentials/auth-token to the request body 
+2) Add the credentials/auth-token on the request’s ‘authentication’ line 
+3) Pass the credentials/auth-token in the request’s ‘credentials’ header
+* 4) Pass the credentials/auth-token in the request’s ‘authorization’ header 
+
+
+Topic: HTTP Requests
+Sub-Topic: Passing Parameters
+Q:07
+Text: Multiple parameters can be passed on the URL when making an HTTP request. True or False?  
+A:
+1) False
+* 2) True
+
+
+
+## Questions For 
+Topic: HTTP Response Data
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:01
+Text: You want to retrieve a JSON formated list from a web service. Which header would you add to the HTTP request? 
+A:
+1) Accepts: application/json
+2) Request: application/json
+* 3) Accept: application/json
+4) Requests: application/json
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:02
+Text: You make an HTTP request. You recieve a response status number between 400-499. What does this indicate about the request?
+A:
+1) The request was redirected
+* 2) There was a problem with the request
+3) There was a problem at the server
+4) The request was successful
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:03
+Text: Given the following HTTP response, what kind of data should you exepect in the response body?
+
+HTTP/1.1 200 OK
+Date: Mon, 27 Jan 2022 12:28:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+Content-Length: 88
+Content-Type: application/json
+Connection: Closed
+
+A:
+1) JavaScript source code
+* 2) Data in JavaScript Object Notation format
+3) Plain Text
+4) PNG Image data
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:04
+Text: Given the following HTTP response, what should you expect to see in the response body?
+
+HTTP/1.1 200 OK
+Date: Mon, 27 Jan 2022 12:28:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+Content-Length: 19
+Content-Type: application/json
+Connection: Closed
+
+A:
+1) name="john johnson"
+2) {"name":"john johnson"}
+3) lname:johnson
+* 4) {"lname":"johnson"}
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:05
+Text: Finish the statement. A single HTTP request can return ...?
+A:
+* 1) a single HTTP response with zero or one body sections for response data.
+2) one or more HTTP responses each with zero or one body sections.
+3) a single HTTP response with one or more body sections for response and error data. 
+4) one or more HTTP responses each with one or more body sections.
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:06
+Text: You make an HTTP request. The response comes back with a status in the range 300-399. What do you do next?
+A:
+1) Retrieve the requested data from the body of the response.
+* 2) Make another request using the URL in the response’s Location header
+3) Notify the user that a server error has occurred and suggest that they notify the system administrator and try the operation again later. 
+4) Notify the user that the requested item is not available
+
+
+Topic: HTTP
+Sub-Topic: Response
+Q:07
+Text: The web service you plan to use can return data in either XML or JSON format. How do you let the server know that you would like the response to be in JSON format?
+A:
+1) Set the following request header Content-Type: JSON
+* 2) Set the following request header Accept: application/json
+3) Set the requested data type on the URL: http://server/path?type=json 
+4) Put the requested data type on the first line of the request right after the request type: GET:JSON
+
+
+## Questions For 
+Topic: JavaScript - Data Types
+
+Topic: JavaScript
+Sub-Topic: Data Types
+Q:01
+Text: Which one of the following is NOT a JavaScript data type?
+A:
+1) string
+* 2) character
+3) boolean
+4) number
+
+
+Topic: JavaScript
+Sub-Topic: Data Types
+Q:02
+Text: What output should you expect from the following code?
+
+var x = '25';
+typeof x
+
+A:
+1) 'number'
+2) 'object'
+3) 'boolean'
+* 4) 'string'
+
+
+Topic: JavaScript
+Sub-Topic: Data Types
+Q:03
+Text: Given the following code, which one of the answers below returns false?
+
+var a = new Date();
+var b = {"name":"steve"};
+var c = [1,2,3];
+var d = "stuff";
+
+1) (a instanceof Date) 
+2) (a instanceof Object)
+3) (b instanceof Object) 
+4) (c instanceof Array) 
+* 5) (d instanceof String)
+
+
+Topic: JavaScript
+Sub-Topic: Data Types
+Q:04
+Text: Which one of the following is NOT a native JavaScript object type?
+A:
+1) Object
+2) String
+* 3) Integer
+4) Array
+5) Date
+
+
+Topic: JavaScript
+Sub-Topic: Data Types
+Q:05
+Text: Given the following JavaScript code, what will be displayed in the console after it runs?
+
+let a = new Array();
+console.log( typeof a );
+
+A:
+1) array
+* 2) object
+3) Array
+4) Object
+5) undefined
+
+
+ Topic: JavaScript
+Sub-Topic: Data Types
+Q:06
+Text: Given the following JavaScript code, what will be displayed in the console?
+
+01  let a = 3;
+02  let b = "5";
+03  let result = a * b;
+04  console.log( result );
+
+A:
+1) 555
+* 2) 15
+3) 35
+4) An error will be thrown from line 03
+
+
+Topic: JavaScript
+Sub-Topic: Data Types
+Q:07
+Text: Given the following JavaScript code, what will be displayed in the console?
+
+01  let a = 0
+02  let b = 1
+03  let c = (a || b)?'TRUE':'FALSE';
+04  console.log(c);
+
+A:
+1) true
+2) false
+* 3) TRUE
+4) FALSE
+5) 1
+
+
+## Questions For 
+Topic: JavaScript - Operators
+
+Topic: JavaScript
+Sub-Topic: Operators
+Q:01
+Text: What would be the result of the following JavaScript code?
+
+var x = 12;
+var y = "Main Street";
+console.log( x + y );
+
+A:
+1) 12 Main Street
+* 2) 12Main Street
+3) Twelve Main Street
+4) The statement x + y would return an error
+
+
+Topic: JavaScript
+Sub-Topic: Operators
+Q:02
+Text: What would be the result of the following JavaScript code?
+
+var x = 12;
+var y = "24";
+console.log( x + y );
+
+A:
+* 1) The string "1224"
+2) The number 36
+3) The string "36"
+4) The number 1224
+5) The statement x + y would return an error
+
+
+Topic: JavaScript
+Sub-Topic: Operators
+Q:03
+Text: What would be the result of the following JavaScript code?
+
+var x = 2;
+var y = 3;
+var z = 5;
+console.log( (x * z + y)/z );
+
+A:
+1) The number 1
+2) The number 2
+* 3) The number 2.6
+4) The number 3
+5) The statement (x * z + y)/z would return an error
+
+
+Topic: JavaScript
+Sub-Topic: Operators
+Q:04
+Text: What would be the result of the following JavaScript code?
+
+var x = 12;
+var y = 6;
+console.log( 12 % 6 );
+
+A:
+1) 12
+2) 6
+3) 2
+* 4) 0
+
+
+Topic: JavaScript
+Sub-Topic: Operators
+Q:05
+Text: What would be the result of the following JavaScript code?
+
+var y = 3;
+y += 2;
+console.log( y );
+
+A:
+1) 1
+2) 2
+3) 3
+4) 4
+* 5) 5
+
+ 
+Topic: JavaScript
+Sub-Topic: Operators
+Q:06
+Text: What would be the result of the following JavaScript code?
+
+01  var a = true;
+02  var b = true;
+03  var c = false;
+04  console.log( a && b || c );
+
+A:
+* 1) true
+2) false
+3) 0
+4) 1
+5) An error is thrown on line 04
+
+
+
+
+Q:07
+Text: What would be the result of the following JavaScript code?
+
+01  let a = 9;
+02  let b = 3;
+03  console.log( a & b );
+
+A:
+1) 12
+* 2) 1
+3) true
+4) false
+5) An error is thrown on line 03
+
+
+
+## Questions For 
+Topic: JavaScript - Creating Variables
+
+
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:01
+Text: Which of the following statements will not create a variable in JavaScript?
+A:
+1) var a = 1;
+2) let b = '2';
+* 3) boolean c = false;
+4) d = "hello";
+5) All of the above statements will create a variable in JavaScript.
+
+
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:02
+Text: Which of the following statements DOES NOT use a valid number literal?
+A:
+1) let a = 20;
+2) let b = 20.123;
+3) let c = 2012e-2;
+4) let d = 0x14;
+* 5) All of the above statements use valid number literals.
+
+
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:03
+Text: Given the following code, what is the result?
+
+01	const a = 2.1415
+02	a += 1
+03	console.log(a)
+
+A:
+1) 1 is displayed in the console
+2) 2.1415 is displayed in the console
+3) 3.1415 is displayed in the console
+4) An error is thrown on the line 01
+* 5) An error is thrown on line 02
+
+
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:04
+Text: Given the following code, what is the result?
+
+01	let a = 1;
+02	if(true){ 
+03	    console.log(a);
+04	    a = 2;
+05	} 
+06	console.log(a)
+
+A:
+1) 1 is displayed twice in the console
+2) 1 is displayed in the console and then 2 is displayed 
+* 3) An error is thrown from line 04
+4) An error is thrown from line 02
+
+
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:05
+Text: Which of the following will NOT create a new Object variable?
+
+A:
+1) let a = {};
+2) let b = new Object({})
+* 3) let c = {'name:john'}
+4) let d = {name:'john'}
+5) let e = {1:'one', 2:'two'}
+
+ 
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:06
+Text: Which one of the following statements will throw an error in JavaScript?
+A:
+1) let a = new Date()
+2) let b = new Date('12/31/2022')
+3) let c = new Date(1671014370593)
+4) let d = Date('12/31')
+* 5) None of the above statements throw an error 
+
+
+Topic: JavaScript
+Sub-Topic: Creating Variables
+Q:07
+Text: Given the following code, what is the result?
+
+01  var a = 1;
+02  if(true){
+03      a +=2 
+04      b = a
+05  } 
+06  console.log("b: " + b)
+
+A:
+1) An error is thrown from line 03
+2) An error is thrown from line 04 
+* 3) b: 3 is printed in the console
+4) b: 2 is printed in the console
+5) An error is thrown from line 06 
+
+
+
+
+## Questions For 
+Topic: JavaScript - Looping
+
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:01
+Text: Given the following code, what is printed in the console?
+
+let a = ['a','b','c'];
+for(char of a){console.log(char);}
+
+A:
+* 1) The letters a, b and c are printed, in order on separate lines.
+2) The letters a, b and c are printed, in order on the same line.
+3) The letters a, b and c are printed, in reverse order on separate lines.
+4) The letters a, b and c are printed, in reverse order on the same line.
+5) An error is thrown because "char" is not a JavaScript variable type.
+
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:02
+Text: Which of the following is NOT a loop type in JavaScript?
+A:
+1) for loop
+2) for/in loop
+* 3) do/with
+4) for/of loop
+5) do/while
+
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:03
+Text: Given the array of days below, which code will NOT print the days of the week on separate lines in the JavaScript console. 
+
+let days = ['mon','tue','wed','thu','fri','sat','sun'];
+
+A:
+1) for(let i=0; i < days.length; i++){ console.log(days[i]); }
+* 2) for(day in days){console.log(day)}
+3) for(day of days){console.log(day)}
+4) for(day in days){console.log(days[day])}
+
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:04
+Text: Given the following code, what is printed in the console?
+
+01	let a = 5;
+02	let result = "";
+03	while(a >= 0){
+04	    result += a;
+05	    a--;
+06	    if( a === 2){ break;}
+07	}
+08	console.log(result);
+
+A:
+1) 543210
+2) 5432
+* 3) 543
+4) 210
+5) 012
+
+
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:05
+Text: Given the following code, what is printed in the console?
+
+01	let a = 5;
+02	let result = "";
+03	while(a > 0){
+04	    a--;
+05	    if( a === 2){ continue;}
+06	    result += a;    
+07	}
+08	console.log(result);
+
+A:
+1) 543210
+2) 543
+3) 43210
+* 4) 4310
+5) 4321
+ 
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:06
+Text: Which JavaScript looping structure is designed to iterate over the members of an object? 
+
+A:
+1) for loop
+* 2) for/in loop
+3) for/of loop
+4) while loop
+5) do/while loop
+
+
+Topic: JavaScript
+Sub-Topic: Looping
+Q:07
+Text: Which JavaScript looping structure is designed to iterate over strings and arrays (iterables)? 
+
+A:
+1) for loop
+2) for/in loop
+* 3) for/of loop
+4) while loop
+5) do/while loop
+
+
+
+## Questions For 
+Topic: JavaScript - Decision Constructs
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:01
+Text: Given the variable 'a', which of the following statements will not print a value?
+
+let a = 7;
+
+A:
+1) if( a == 7){console.log(a);}
+2) if( a != 8){console.log(a);}
+* 3) if( a > 7){console.log(a);}
+4) if( a === 7){console.log(a);}
+5) if( a < 10){console.log(a);}
+
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:02
+Text: Given the JavaScript code below, what text will be printed out?
+
+01  let selectedFlag = true;
+02  let selectedText = (selectedFlag === true)?"SELECTED":"NOT Selected";
+03  console.log( selectedText );
+
+A:
+1) selectedFlag
+* 2) SELECTED
+3) true
+4) NOT Selected
+5) false
+
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:03
+Text: Given the JavaScript code below, what text will be printed out?
+
+01  let chars = ['a','b','c'];
+02  let test = 'z';
+03  if(chars.includes(test)){
+04      console.log('includes: ' + test);
+05  }else{
+06      console.log('does not include: ' + test);
+07  }
+
+A:
+1) includes test
+2) does not include test
+3) includes z
+* 4) does not include z
+5) ['a','b','c']
+
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:04
+Text: Given the JavaScript code below, what text will be printed out?
+
+01	let a = 2;
+02	let result = "";
+03	switch (a) {
+04	    case 'one':
+05	        result = 1
+06	        break;
+07	    case 'two':
+08	        result = 2;
+09            break;
+10        case 'three':
+11	        result = 3;
+12	        break;
+13	    default:
+14	        result = 4;
+15	        break;
+16	}
+17	console.log(result);
+
+A:
+1) 1
+2) 2
+3) 3
+* 4) 4
+
+
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:05
+Text: Given the JavaScript code below, what text will be printed out?
+
+01	let text = 'abcba';
+02	let result = "";
+03	if(text.startsWith('a')){
+04	    if(text.endsWith('a')){
+05	        result = "Code01";
+06	    }else{
+07	        result = "Code02";
+08	    }
+09  }else if(text.endsWith('a')){
+10      result = "Code03";
+11	}else{
+12	    result = 'Code04';
+13	}
+14	console.log(result);
+
+A:
+* 1) Code01 
+2) Code02 
+3) Code03 
+4) Code04
+
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:06
+Text: Given the JavaScript code below, what text will be printed out?
+
+01  let ready = false;
+02  let label = (ready)?"is Ready":"is not Ready";
+03  console.log( label );
+
+A:
+1) Is Ready
+* 2) Is not Ready
+3) label
+4) false
+5) true
+
+
+Topic: JavaScript
+Sub-Topic: Decision Constructs
+Q:07
+Text: Given the JavaScript code below, what text will be printed out?
+
+01  let a = 1
+02  let b = 2
+03  let c = 3
+04  if(a += b * c){
+05      console.log(a);
+06  }
+
+A:
+
+1) Nothing is printed
+2) 1
+3) 6
+* 4) 7
+5) 9
+
+
+
+## Questions For 
+Topic: Linux OS - Command Line Proficiency
+
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:01
+You are in a Linux terminal. Which command will create a new directory with the name "mydir"?
+A:
+1) md mydir
+2) makedir mydir
+3) create mydir
+* 4) mkdir mydir
+5) make mydir
+
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:02
+You are in a Linux terminal. Which command will list the contents of the current directory along with file size, date, ownership and permissions?
+A:
+1) list --all
+2) dir --all
+3) ls -a
+* 4) ls -l
+5) listall
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:03
+You are in a Linux terminal. The current directory is "dir2". The directory structure is listed below. Which command will copy the "example.txt" file from "dir1" into the current directory?
+
+temp
+├── dir1
+│   └── example.txt
+└── dir2
+
+A:
+* 1) cp ../dir1/example.txt . 
+2) cp /temp/dir1/example.txt .
+3) copy temp/dir1/example.txt
+4) move temp/dir1/example.txt
+
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:04
+You are in a Linux terminal. Which commands will create a new temporary environment variable with the name "APP_VERSION" and value "12.1" and then display the new variable?
+A:
+1) 
+set APP_VERSION=12.1
+echo %APP_VERSION%
+   
+* 2) 
+export APP_VERSION=12.1
+echo $APP_VERSION
+
+3) 
+set APP_VERSION=12.1
+show %APP_VERSION%
+
+4) 
+set APP_VERSION=12.1
+echo $APP_VERSION
+
+5)
+export APP_VERSION=12.1
+echo %APP_VERSION%
+
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:05
+You are in a Linux terminal. Which command displays a list of all environment variables?
+A:
+1) echo environment
+* 3) env
+4) set
+5) show env
+
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:06
+You are in a Linux terminal. Which command would you use to clear the console?
+A:
+* 1) clear
+2) erase
+3) cls
+4) clr
+
+
+Topic: Linux
+Sub-Topic: Terminal
+Q:07
+You are in a Linux terminal. You want to create a small text file. Which statement below can be used to create a new file named “start.sh” with the contents “#some content”?
+A:
+1) cat "#some content" > start.sh
+2) type "#some content" > start.sh
+3) more "#some content" > start.sh
+* 4) echo "#some content" > start.sh
+
+
+
+
+## Questions For 
+Topic: Windows OS - Command Line Proficiency
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:01
+You are in a Windows Command Prompt. Which command will create a new directory with the name "mydir"?
+A:
+* 1) md mydir
+2) makedir mydir
+3) create mydir
+4) make mydir
+
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:02
+You are in a Windows Command Prompt. Which command will list the files in the current directory including name, size and date?
+A:
+1) list 
+2) dir -n
+3) ls
+* 4) dir
+5) lsdir
+
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:03
+Text: You are in a Windows Command Prompt. The current directory is "dir2". The directory structure is listed below. Which command will copy the "example.txt" file from "dir1" into the current directory?
+
+D:\TEMP
+├───dir1
+│       example.txt
+│
+└───dir2
+
+A:
+1) cp ..\dir1\example.txt . 
+2) cp /temp/dir1/example.txt .
+3) copy ../dir1/example.txt
+* 4) copy ..\dir1\example.txt
+5) move ../dir1/example.txt
+
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:04
+You are in a Windows Command Prompt. Which commands will create a new temporary environment variable with the name "APP_VERSION" and value "12.1" and then display the new variable?
+A:
+* 1) 
+set APP_VERSION=12.1
+echo %APP_VERSION%
+   
+2) 
+export APP_VERSION=12.1
+echo $APP_VERSION
+
+3) 
+set APP_VERSION=12.1
+show %APP_VERSION%
+
+4) 
+set APP_VERSION=12.1
+echo $APP_VERSION
+
+5)
+export APP_VERSION=12.1
+echo %APP_VERSION%
+
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:05
+You are in a Windows Command Prompt. Which command displays a list of all environment variables?
+A:
+1) echo environment
+2) printenv
+3) env
+* 4) set
+5) showenv
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:06
+You are in a Windows Command Prompt. Which command would you use to clear the console?
+A:
+1) clear
+2) erase
+* 3) cls
+4) clr
+
+
+Topic: Windows
+Sub-Topic: Command Prompt
+Q:07
+You are in a Windows Command Prompt. You need to create and edit a small file but don’t want to open a full IDE to do it. Which editor comes with Windows and is available to invoke from the command prompt?
+A:
+1) writer
+2) notes
+3) pgedit
+* 4) notepad
+5) edit
+
+
+
+
+

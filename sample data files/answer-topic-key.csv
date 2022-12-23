@@ -1,0 +1,70 @@
+﻿1,C,Which of the statements below is NOT true of HTTP requests?
+1,A,What is wrong with the HTTP request below?   GET /index.html HTTP/1.1 User-Agent: Mozilla/4.0  Host: www.mycompany.com Content-Type: image/jpeg
+1,A,You make a request in JavaScript for customer data from a RESTful web service. Which one of the following headers would you include with the request?
+1,D,Which of the following is NOT an HTTP request type?
+1,D,How can you tell when a server error has occured in response to an HTTP request?
+1,A,Which HTTP request type is executed when a user clicks on an anchor tag on a web page?
+1,B,Which one of the items below is not required as part of a standard HTTP GET request?
+2,B,You are sending an HTTP request to a web service. The web service requires you to pass a name as a query parameter on the URL. Which of the following URLs displays the correct format?
+2,E,When making an HTTP request you pass the parameter namepam on the URL. Which header is required?
+2,D,You are making an HTTP request that uploads data to a web service. Which of the following would you NOT expect to use in the request
+2,C,You are making an HTTP request that inserts or updates data on a web service. Which of the following request types could be used?
+2,B,"When uploading data via an HTTP request, only data in human readable should be uploaded in the request body.  True or False?"
+2,D,You are making an HTTP POST request that inserts or updates data on a secured web service. How would you send the credentials/auth-token?
+2,B,Multiple parameters can be passed on the URL when making an HTTP request. True or False?
+3,C,You want to retrieve a JSON formated list from a web service. Which header would you add to the HTTP request?
+3,B,You make an HTTP request. You recieve a response status number between 400-499. What does this indicate about the request?
+3,B,"Given the following HTTP response, what kind of data should you expect in the response body?   HTTP/1.1 200 OK Date: Mon, 27 Jan 2022 12:28:53 GMT Server: Apache/2.2.14 (Win32) Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT Content-Length: 88 Content-Type: application/json Connection: Closed"
+3,D,"Given the following HTTP response, what should you expect to see in the response body?    HTTP/1.1 200 OK Date: Mon, 27 Jan 2022 12:28:53 GMT| Server: Apache/2.2.14 (Win32) Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT Content-Length: 19 Content-Type: application/json Connection: Closed"
+3,A,Finish the statement. A single HTTP request can return ...?
+3,B,You make an HTTP request. The response comes back with a status in the range 300-399. What do you do next?
+3,B,The web service you plan to use can return data in either XML or JSON format. How do you let the server know that you would like the response to be in JSON format?
+4,B,Which one of the following is NOT a JavaScript data type?
+4,D,What output should you expect from the following code?   var x  &#39;25&#39;; typeof x
+4,E,"Given the following code, which one of the answers below returns false?   var a  new Date(); var b  {&quot;name&quot;:&quot;steve&quot;}; var c  [1,2,3]; var d  &quot;stuff&quot;;"
+4,C,Which one of the following is NOT a native JavaScript object type?
+4,B,"Given the following JavaScript code, what will be displayed in the console after it runs?   let a  new Array(); console.log( typeof a);"
+4,B,"Given the following JavaScript code, what will be displayed in the console?   01  let a  3; 02  let b  &quot;5&quot;; 03  let result  a * b; 04  console.log( result );"
+4,C,"Given the following JavaScript code, what will be displayed in the console?   01  let a  0 02  let b  1 03  let c  (a || b)?&#39;TRUE&#39;:&#39;FALSE&#39;; 04  console.log(c);"
+5,B,What would be the result of the following JavaScript code?   var x  12; var y  &quot;Main Street&quot;; console.log( x + y );
+5,A,What would be the result of the following JavaScript code?   var x  12; var y  &quot;24&quot;; console.log( x + y );
+5,C,What would be the result of the following JavaScript code?   var x  2; var y  3; var z  5; console.log( (x * z + y)/z );
+5,D,What would be the result of the following JavaScript code?   var x  12; var y  6; console.log( 12 % 6 );
+5,E,What would be the result of the following JavaScript code?   var y  3; y + 2; console.log( y );
+5,A,What would be the result of the following JavaScript code?   01  var a  true; 02  var b  true; 03  var c  false; 04  console.log( a &amp;&amp; b || c );
+5,B,What would be the result of the following JavaScript code?   01  let a  9; 02  let b  3; 03  console.log( a &amp; b );
+6,C,Which of the following statements will not create a variable in JavaScript?
+6,E,Which of the following statements DOES NOT use a valid number literal?
+6,E,"Given the following code, what is the result?   01    const a  2.1415 02    a + 1 03    console.log(a)"
+6,C,"Given the following code, what is the result?   01    let a  1; 02    if(true){  03        console.log(a); 04        a  2; 05    }  06    console.log(a)"
+6,C,Which of the following will NOT create a new Object variable?
+6,E,Which one of the following statements will throw an error in JavaScript?
+6,C,"Given the following code, what is the result?   01  var a  1; 02  if(true){ 03      a +2  04      b  a 05  }  06  console.log(&quot;b: &quot; + b)"
+7,A,"Given the following code, what is printed in the console?   let a  [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]; for(char of a){console.log(char);}"
+7,C,Which of the following is NOT a loop type in JavaScript?
+7,B,"Given the array of days below, which code will NOT print the days of the week on separate lines in the JavaScript console.    let days  [&#39;mon&#39;,&#39;tue&#39;,&#39;wed&#39;,&#39;thu&#39;,&#39;fri&#39;,&#39;sat&#39;,&#39;sun&#39;];"
+7,C,"Given the following code, what is printed in the console?   01    let a  5; 02    let result  &quot;&quot;; 03    while(a &gt; 0){ 04        result + a; 05        a--; 06        if( a  2){ break;} 07    } 08    console.log(result);"
+7,D,"Given the following code, what is printed in the console?   01    let a  5; 02    let result  &quot;&quot;; 03    while(a &gt; 0){ 04        a--; 05        if( a  2){ continue;} 06        result + a; 07    } 08    console.log(result);"
+7,B,Which JavaScript looping structure is designed to iterate over the members of an object?
+7,C,Which JavaScript looping structure is designed to iterate over strings and arrays (iterables)?
+8,C,"Given the variable &#39;a&#39;, which of the following statements will not print a value?   let a  7;"
+8,B,"Given the JavaScript code below, what text will be printed out?   01  let selectedFlag  true; 02  let selectedText  (selectedFlag  true)?&quot;SELECTED&quot;:&quot;NOT Selected&quot;; 03  console.log( selectedText );"
+8,D,"Given the JavaScript code below, what text will be printed out?   01  let chars  [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]; 02  let test  &#39;z&#39;; 03  if(chars.includes(test)){ 04      console.log(&#39;includes: &#39; + test); 05  }else{ 06      console.log(&#39;does not include: &#39; + test); 07  }"
+8,D,"Given the JavaScript code below, what text will be printed out?   01    let a  2; 02    let result  &quot;&quot;; 03    switch (a) { 04        case &#39;one&#39;: 05            result  1 06            break; 07        case &#39;two&#39;: 08            result  2; 09            break; 10        case &#39;three&#39;: 11            result  3; 12            break; 13        default: 14            result  4; 15            break; 16    } 17    console.log(result);"
+8,A,"Given the JavaScript code below, what text will be printed out?   01    let text  &#39;abcba&#39;; 02    let result  &quot;&quot;; 03    if(text.startsWith(&#39;a&#39;)){ 04        if(text.endsWith(&#39;a&#39;)){ 05            result  &quot;Code01&quot;; 06        }else{ 07            result  &quot;Code02&quot;; 08        } 09  }else if(text.endsWith(&#39;a&#39;)){ 10      result  &quot;Code03&quot;; 11    }else{ 12        result  &#39;Code04&#39;; 13    } 14    console.log(result);"
+8,B,"Given the JavaScript code below, what text will be printed out?   01  let ready  false; 02  let label  (ready)?&quot;is Ready&quot;:&quot;is not Ready&quot;; 03  console.log( label );"
+8,D,"Given the JavaScript code below, what text will be printed out?   01  let a  1 02  let b  2 03  let c  3 04  if(a + b * c){ 05      console.log(a); 06  }"
+9,D,You are in a Linux terminal. Which command will create a new directory with the name &quot;mydir&quot;?
+9,D,"You are in a Linux terminal. Which command will list the contents of the current directory along with file size, date, ownership and permissions?"
+9,A,You are in a Linux terminal. The current directory is &quot;dir2&quot;. The directory structure is listed below. Which command will copy the &quot;example.txt&quot; file from &quot;dir1&quot; into the current directory?   temp ├── dir1 │   └── example.txt └── dir2
+9,B,You are in a Linux terminal. Which commands will create a new temporary environment variable with the name &quot;APP_VERSION&quot; and value &quot;12.1&quot; and then display the new variable?
+9,B,You are in a Linux terminal. Which command displays a list of all environment variables?
+9,A,You are in a Linux terminal. Which command would you use to clear the console?
+9,D,You are in a Linux terminal. You want to create a small text file. Which statement below can be used to create a new file named ''start.sh&rdquo; with the contents ''#some content&rdquo;?
+10,A,You are in a Windows Command Prompt. Which command will create a new directory with the name &quot;mydir&quot;?
+10,D,"You are in a Windows Command Prompt. Which command will list the files in the current directory including name, size and date?"
+10,D,You are in a Windows Command Prompt. The current directory is &quot;dir2&quot;. The directory structure is listed below. Which command will copy the &quot;example.txt&quot; file from &quot;dir1&quot; into the current directory?   D:\TEMP ├───dir1 │       example.txt │ └───dir2
+10,A,You are in a Windows Command Prompt. Which commands will create a new temporary environment variable with the name &quot;APP_VERSION&quot; and value &quot;12.1&quot; and then display the new variable?
+10,D,You are in a Windows Command Prompt. Which command displays a list of all environment variables?
+10,C,You are in a Windows Command Prompt. Which command would you use to clear the console?
+10,D,You are in a Windows Command Prompt. You need to create and edit a small file but dont want to open a full IDE to do it. Which editor comes with Windows and is available to invoke from the command prompt?
