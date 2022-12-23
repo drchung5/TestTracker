@@ -14,22 +14,24 @@ import java.util.Locale;
 public class UserInterface {
 
   private String resultsFilePath   = null;
-  private String answerKeyFilePath = null;
-  private String mappingFilePath   = null;
+  private String answerTopicKeyFilePath = null;
+  private String topicArticleMapFilePath   = null;
+  private String topicCourseMapFilePath   = null;
 
   JFrame frame = null;
 
   private JFileChooser fileChooser = new JFileChooser();
 
-  private JButton resultsButton   = new JButton("Select Results File");
-  private JButton answerkeyButton = new JButton("Select Answer Key File");
-  private JButton mappingButton   = new JButton("Select Mapping File");
-  private JButton runButton       = new JButton("Run Analysis");
+  private JButton resultsButton         = new JButton("Select Results File");
+  private JButton answerTopicKeyButton  = new JButton("Select Answer Topic Key File");
+  private JButton topicArticleMapButton = new JButton("Select Topic Article Map File");
+  private JButton topicCourseMapButton  = new JButton("Select Topic Course Map File");
+  private JButton runButton             = new JButton("Run Analysis");
 
   public UserInterface() {
     frame = new JFrame("Test Tracker");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setSize(300,200);
+    frame.setSize(300,210);
     setUpGUI(frame.getContentPane());
     addListeners(frame.getContentPane());
     frame.setVisible(true);
@@ -37,16 +39,16 @@ public class UserInterface {
 
   private void setUpGUI(Container pane) {
 
-    fileChooser.setFileFilter(new FileNameExtensionFilter("Test files (.csv)","csv"));
-
     pane.setLayout(new GridLayout(5,1));
     pane.add(resultsButton);
-    pane.add(answerkeyButton);
-    pane.add(mappingButton);
+    pane.add(answerTopicKeyButton);
+    pane.add(topicArticleMapButton);
+    pane.add(topicCourseMapButton);
     pane.add(runButton);
 
-    answerkeyButton.setEnabled(false);
-    mappingButton.setEnabled(false);
+    answerTopicKeyButton.setEnabled(false);
+    topicArticleMapButton.setEnabled(false);
+    topicCourseMapButton.setEnabled(false);
     runButton.setEnabled(false);
 
 
@@ -58,6 +60,10 @@ public class UserInterface {
     resultsButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
+
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Results files (.csv)","csv"));
+        fileChooser.setDialogTitle("Open Results File");
+
         int returnVal = fileChooser.showDialog(pane, "Open Results File");
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -67,42 +73,71 @@ public class UserInterface {
           System.out.println("Results file: " + resultsFilePath);
 
           resultsButton.setEnabled(false);
-          answerkeyButton.setEnabled(true);
+          answerTopicKeyButton.setEnabled(true);
         }
 
       }
     });
 
-    answerkeyButton.addActionListener(new ActionListener() {
+    answerTopicKeyButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        int returnVal = fileChooser.showDialog(pane, "Open Answer Key File");
+
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Results files (.csv)","csv"));
+        fileChooser.setDialogTitle("Open Answer Topic Key File");
+
+        int returnVal = fileChooser.showDialog(pane, "Open Answer Topic Key File");
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
           File selectedFile = fileChooser.getSelectedFile();
-          answerKeyFilePath = selectedFile.getAbsolutePath();
+          answerTopicKeyFilePath = selectedFile.getAbsolutePath();
 
-          System.out.println("Answer Key file: " + answerKeyFilePath);
+          System.out.println("Answer Topic Key file: " + answerTopicKeyFilePath);
 
-          answerkeyButton.setEnabled(false);
-          mappingButton.setEnabled(true);
+          answerTopicKeyButton.setEnabled(false);
+          topicArticleMapButton.setEnabled(true);
         }
 
       }
     });
 
-    mappingButton.addActionListener(new ActionListener() {
+    topicArticleMapButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        int returnVal = fileChooser.showDialog(pane, "Open Mapping File");
+
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Map files (.json)","json"));
+        fileChooser.setDialogTitle("Open Topic Article Map File");
+
+        int returnVal = fileChooser.showDialog(pane, "Open Topic Article Map File");
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
           File selectedFile = fileChooser.getSelectedFile();
-          mappingFilePath = selectedFile.getAbsolutePath();
+          topicArticleMapFilePath = selectedFile.getAbsolutePath();
 
-          System.out.println("Mapping file: " + mappingFilePath);
+          System.out.println("Topic Article Mapping file: " + topicArticleMapFilePath);
 
-          mappingButton.setEnabled(false);
+          topicArticleMapButton.setEnabled(false);
+          topicCourseMapButton.setEnabled(true);
+        }
+
+      }
+    });
+
+    topicCourseMapButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Map files (.json)","json"));
+        fileChooser.setDialogTitle("Open Topic Course Map File");
+        int returnVal = fileChooser.showDialog(pane, "Open Topic Course Map File");
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+          File selectedFile = fileChooser.getSelectedFile();
+          topicCourseMapFilePath = selectedFile.getAbsolutePath();
+
+          System.out.println("Topic Course Map file: " + topicCourseMapFilePath);
+
+          topicCourseMapButton.setEnabled(false);
           runButton.setEnabled(true);
         }
 
@@ -113,7 +148,7 @@ public class UserInterface {
       @Override
       public void actionPerformed(ActionEvent e) {
 
-        TestController.processResults( resultsFilePath, answerKeyFilePath, mappingFilePath);
+//        TestController.processResults( )
 
         ResultsDialog resultsDialog = new ResultsDialog(frame, "Result", "recomendations.txt written");
         resultsDialog.setVisible(true);

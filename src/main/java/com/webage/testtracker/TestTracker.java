@@ -1,35 +1,46 @@
 package com.webage.testtracker;
 
-import com.webage.testtracker.analyzer.ResultsAnalyzer;
-import com.webage.testtracker.model.AnswerKey;
-import com.webage.testtracker.model.Mappings;
-import com.webage.testtracker.model.Recommendation;
+import com.webage.testtracker.controller.TestController;
+import com.webage.testtracker.model.AnswerTopicKey;
 import com.webage.testtracker.model.Results;
-import com.webage.testtracker.parsers.AnswerKeyParser;
-import com.webage.testtracker.parsers.QuestionCourseMappingsParser;
+import com.webage.testtracker.model.TopicArticleMap;
+import com.webage.testtracker.model.TopicCourseMap;
+import com.webage.testtracker.parsers.AnswerTopicKeyParser;
 import com.webage.testtracker.parsers.ResultsParser;
+import com.webage.testtracker.parsers.TopicArticleMapParser;
+import com.webage.testtracker.parsers.TopicCourseMapParser;
 import com.webage.testtracker.ui.UserInterface;
-
-import java.util.List;
 
 public class TestTracker {
 
   public static void main(String[] argv ) {
 
-    new UserInterface();
+//    new UserInterface();
 
 //    Results results = ResultsParser.ParseResults("../results.csv");
-//
-//    Mappings mappings = QuestionCourseMappingsParser.ParseResults("../question-course-map.csv");
-//
-//    AnswerKey answerKey = AnswerKeyParser.parseAnswerKey("../answer-key.csv");
+//    AnswerTopicKey answerTopicKey = AnswerTopicKeyParser.parseAnswerTopicKey("../answer-topic-key.csv");
+//    TopicCourseMap topicCourseMap = TopicCourseMapParser.parseTopicCourseMap("../topic-course-map.json");
+//    TopicArticleMap topicArticleMap = TopicArticleMapParser.parseTopicArticleMap("../topic-article-map.json");
+
+    TestController.processResults(
+                          "../results.csv",
+                          "../answer-topic-key.csv",
+                          "../topic-article-map.json",
+                          "../topic-course-map.json");
+
+//    System.out.println(answerTopicKey);
+//    System.out.println(results);
+//    System.out.println(topicCourseMap);
+//    System.out.println(topicArticleMap);
+
+
 //
 //    List<Recommendation> recommendations = ResultsAnalyzer.getRecommendations(results,mappings,answerKey,70);
 //
-////    System.out.println(results);
-////    System.out.println(mappings);
-////    System.out.println(answerKey);
-//
+//    System.out.println(results);
+//    System.out.println(mappings);
+//    System.out.println(answerTopicKey);
+
 //    for( Recommendation recommendation : recommendations ) {
 //      System.out.println(recommendation);
 //    }

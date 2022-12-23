@@ -1,13 +1,8 @@
 package com.webage.testtracker.controller;
 
 import com.webage.testtracker.analyzer.ResultsAnalyzer;
-import com.webage.testtracker.model.AnswerKey;
-import com.webage.testtracker.model.Mappings;
-import com.webage.testtracker.model.Recommendation;
-import com.webage.testtracker.model.Results;
-import com.webage.testtracker.parsers.AnswerKeyParser;
-import com.webage.testtracker.parsers.QuestionCourseMappingsParser;
-import com.webage.testtracker.parsers.ResultsParser;
+import com.webage.testtracker.model.*;
+import com.webage.testtracker.parsers.*;
 import com.webage.testtracker.utilities.RecommendationWriter;
 
 import java.util.List;
@@ -16,18 +11,25 @@ public class TestController {
 
   public static void processResults(
                         String resultsFilePath,
-                        String answerKeyFilePath,
-                        String mappingFilePath){
+                        String answerTopicKeyFilePath,
+                        String topicArticleMapFilePath,
+                        String topicCourseMapFilePath){
 
-    Results results = ResultsParser.ParseResults(resultsFilePath);
+    Results results                 = ResultsParser.ParseResults(resultsFilePath);
+    AnswerTopicKey answerTopicKey   = AnswerTopicKeyParser.parseAnswerTopicKey(answerTopicKeyFilePath);
+    TopicArticleMap topicArticleMap = TopicArticleMapParser.parseTopicArticleMap(topicArticleMapFilePath);
+    TopicCourseMap topicCourseMap   = TopicCourseMapParser.parseTopicCourseMap(topicCourseMapFilePath);
 
-    Mappings mappings = QuestionCourseMappingsParser.ParseResults(mappingFilePath);
+    ResultsAnalyzer.getInstance().getRecommendations(
+                                                  results,
+                                                  answerTopicKey,
+                                                  topicArticleMap,
+                                                  topicCourseMap);
 
-    AnswerKey answerKey = AnswerKeyParser.parseAnswerKey(answerKeyFilePath);
 
-    List<Recommendation> recommendations = ResultsAnalyzer.getRecommendations(results,mappings,answerKey,70);
-
-    RecommendationWriter.write(recommendations);
+//    List<Recommendation> recommendations = ResultsAnalyzer.getRecommendations(results,mappings, answerTopicKey,70);
+//
+//    RecommendationWriter.write(recommendations);
 
 //    System.out.println(results);
 //    System.out.println(mappings);

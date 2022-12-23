@@ -7,19 +7,22 @@ import java.util.Set;
 
 public class Recommendation {
 
+
+
   private String name;
   private String email;
   private int score;
 
-  private ArrayList<String> missedQuestions = new ArrayList<>();
-  private Set<Course> courses = new HashSet<>();
+  private ArrayList<TopicArticleMap.Topic> topics = new ArrayList<>();
 
-  public Recommendation( String name,
-                         String email,
-                         int score) {
+  public Recommendation(String name, String email, int score) {
     this.name = name;
     this.email = email;
     this.score = score;
+  }
+
+  public void addTopic(TopicArticleMap.Topic topic) {
+    topics.add(topic);
   }
 
   public String getName() {
@@ -34,22 +37,6 @@ public class Recommendation {
     return score;
   }
 
-  public List<String> getMissedQuestions() {
-    return missedQuestions;
-  }
-
-  public void addMissedQuestion( String missedQuestion ) {
-    missedQuestions.add(missedQuestion);
-  }
-
-  public List<Course> getCourses() {
-    return new ArrayList<>(courses);
-  }
-
-  public void addCourse( Course course ) {
-    courses.add(course);
-  }
-
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
@@ -62,8 +49,8 @@ public class Recommendation {
     builder.append(" : ");
     builder.append(score);
     builder.append(System.lineSeparator());
-    for( Course course: courses ) {
-      builder.append(course.toString());
+    for( TopicArticleMap.Topic topic: topics ) {
+      builder.append(topic.toString());
       builder.append(System.lineSeparator());
     }
 

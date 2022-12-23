@@ -40,6 +40,7 @@ public class ResultsParser {
       System.out.println( e.toString() );
     }
 
+    System.out.println( "Parsed: " + path );
 
     return results;
   }
