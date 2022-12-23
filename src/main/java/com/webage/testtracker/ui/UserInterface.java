@@ -3,13 +3,9 @@ package com.webage.testtracker.ui;
 import com.webage.testtracker.controller.TestController;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
-import java.util.Locale;
 
 public class UserInterface {
 
@@ -147,5 +143,6 @@ public class UserInterface {
     });
 
   }
+
 
 }

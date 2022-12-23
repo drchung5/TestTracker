@@ -2,10 +2,12 @@ package com.webage.testtracker.controller;
 
 import com.webage.testtracker.analyzer.ResultsAnalyzer;
 import com.webage.testtracker.model.*;
-import com.webage.testtracker.parsers.*;
+import com.webage.testtracker.parsers.AnswerTopicKeyParser;
+import com.webage.testtracker.parsers.ResultsParser;
+import com.webage.testtracker.parsers.TopicArticleMapParser;
+import com.webage.testtracker.parsers.TopicCourseMapParser;
 import com.webage.testtracker.utilities.RecommendationWriter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TestController {

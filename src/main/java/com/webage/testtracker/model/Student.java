@@ -29,7 +29,8 @@ public class Student {
     stringBuilder.append(studentInfo);
 
     for( String answer : answers ) {
-      stringBuilder.append( answer + " " );
+      stringBuilder.append( answer );
+      stringBuilder.append( " " );
     }
 
     stringBuilder.append("\n");
@@ -43,10 +44,6 @@ public class Student {
 
   public String getEmail() {
     return email;
-  }
-
-  public int getScore() {
-    return score;
   }
 
   public List<String> getAnswers() {

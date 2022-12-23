@@ -1,7 +1,6 @@
 package com.webage.testtracker.parsers;
 
 import com.google.gson.Gson;
-import com.webage.testtracker.model.AnswerTopicKey;
 import com.webage.testtracker.model.TopicCourseMap;
 
 import java.io.FileReader;

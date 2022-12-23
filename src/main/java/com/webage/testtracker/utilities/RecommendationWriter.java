@@ -6,13 +6,19 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Locale;
 
 public class RecommendationWriter {
 
   public static void write( List<Recommendation> recommendations ) {
 
-    String fileName = LocalDateTime.now()+"recomendations.txt";
+    LocalDateTime now = LocalDateTime.now();
+    String datetime = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-", Locale.ENGLISH));
+
+
+    String fileName = datetime +"recomendations.txt";
 
     File outputFile = new File(fileName);
     System.out.println("Recommendation File: " + outputFile.getAbsolutePath());

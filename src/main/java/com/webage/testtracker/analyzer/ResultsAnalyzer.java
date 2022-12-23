@@ -2,7 +2,8 @@ package com.webage.testtracker.analyzer;
 
 import com.webage.testtracker.model.*;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ResultsAnalyzer {
 
@@ -64,9 +65,7 @@ public class ResultsAnalyzer {
   // calculate score and topic scores
   private int[] calculateScores(Student student) {
 
-    List<String> questions = results.getQuestions();
     List<String> answers   = student.getAnswers();
-    Map<String, AnswerTopicKey.AnswerTopic> keys = answerTopicKey.getKeys();
 
     // TODO: we are assuming that there are 10 topics and that it takes 2/3 to pass a topic
     // topics[0] is the total correct answers answers topics[1]-topics[10]
@@ -76,16 +75,15 @@ public class ResultsAnalyzer {
     for( int i = 0; i < answers.size(); i++ ) {
 
       String answer   = answers.get(i);
-      String question = questions.get(i);
 
       // ignore NAs
       if( !answer.equalsIgnoreCase("NA") ) {
 
         // get the answer
-        String correctAnswer = keys.get(question).getAnswer();
+        String correctAnswer = answerTopicKey.getAnswer(i);
 
         // get the topic
-        int topic = keys.get(question).getTopic();
+        int topic = answerTopicKey.getTopic(i);
 
         // check the answer
         if( answer.equalsIgnoreCase(correctAnswer) ) {
@@ -99,69 +97,5 @@ public class ResultsAnalyzer {
     return scores;
 
   }
-
-
-//    // ordered list of questions (full text)
-//    List<String> questions = results.getQuestions();
-//
-//    // map of question => answer
-//    Map<String, AnswerTopicKey.AnswerTopic> keys = answerTopicKey.getKeys();
-//
-//    ArrayList<Recommendation> recommendations = new ArrayList<>();
-//
-//
-//    // iterate through students
-//    for(Student student: results.getStudents()) {
-//
-//      // check scores
-//      if( student.getScore() <= threshold ) {
-//
-//        Recommendation recommendation = new Recommendation(
-//                                                    student.getName(),
-//                                                    student.getEmail(),
-//                                                    student.getScore()
-//                                                );
-//
-//        ArrayList<String> missedQuestions = new ArrayList<>();
-//        Set<Course> courses = new HashSet<>();
-//
-//
-//        // get an iterator for the answers and for the questions
-//        // will iterate through them together
-//        Iterator<String> answerIterator = student.getAnswers().iterator();
-//        Iterator<String> questionIterator = questions.iterator();
-//
-//        int right = 0;
-//        int wrong = 0;
-//
-//        while( questionIterator.hasNext() && answerIterator.hasNext()) {
-//
-//          String question = questionIterator.next();
-//          String answer = answerIterator.next();
-//          String key = keys.get(question);
-//
-//          // if the answer is NA then the student did not get asked the question
-//          // skip questions with NA answers
-//
-//          if( answer.equalsIgnoreCase("NA")) {
-//            // skip this question
-//            continue;
-//          }
-//
-//          if( !answer.equalsIgnoreCase(key) ) {
-//            recommendation.addMissedQuestion(question);
-//            recommendation.addCourse(mappings.getCourse(question));
-//          }
-//
-//        }
-//
-//        recommendations.add(recommendation);
-//
-//      }
-//
-//    }
-//
-//    return null;
-//  }
 
 }
