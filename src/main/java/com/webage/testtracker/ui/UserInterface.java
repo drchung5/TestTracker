@@ -6,7 +6,26 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.io.File;
+/*
 
+  This class handles ALL UI elements of the program. It allows users to load
+  the files necessary to process results. The UI displays 5 buttons
+
+        Select Results File
+        Select Answer Topic Key File
+        Select Topic Article Map File
+        Select Topic Course Map File
+        Run Analysis
+
+   Only one button at a time is enabled. After the user selects the four
+   inout files the app enables the Run Analysis button. When the user
+   clicks this button the app produces the recommendations and writes
+   them to a file.
+
+   The only connection the UI has to the rest of the application is that it
+   calls TestController.processResults()
+
+ */
 public class UserInterface {
 
   private String resultsFilePath   = null;
@@ -130,6 +149,8 @@ public class UserInterface {
 
     runButton.addActionListener(e -> {
 
+      // all the input files have been selected so pass them to
+      // the TestController to process
       TestController.processResults(
                               resultsFilePath,
                               answerTopicKeyFilePath,
