@@ -7,8 +7,7 @@ import java.util.List;
 
 public class ResultsAnalyzer {
 
-  private static int POINTS_PER_ITEM = 10;
-  private static int TOPIC_THRESHOLD = 2;
+  private static int   TOPIC_THRESHOLD = 2;
 
   private static ResultsAnalyzer INSTANCE;
 
@@ -42,7 +41,7 @@ public class ResultsAnalyzer {
       Recommendation recommendation = new Recommendation(
                                             student.getName(),
                                             student.getEmail(),
-                                            scores[0] * POINTS_PER_ITEM);
+                                            scores[0]);
 
       for(int i = 1; i < scores.length; i++) {
         if(scores[i] < TOPIC_THRESHOLD) {

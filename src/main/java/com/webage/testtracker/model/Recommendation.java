@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class Recommendation {
 
+  private static int   NUMBER_OF_QUESTIONS = 30;
+  private static int   POINTS_PER_QUESTION = 10;
+  private static float PASSING_PERCENTAGE  = 0.40f;
+
   private String name;
   private String email;
   private int score;
@@ -34,11 +38,18 @@ public class Recommendation {
   }
 
   public int getScore() {
-    return score;
+    return score * POINTS_PER_QUESTION;
+  }
+
+  public boolean isPassingScore() {
+    return score >= (int)(PASSING_PERCENTAGE * NUMBER_OF_QUESTIONS);
   }
 
   @Override
   public String toString() {
+
+    System.out.println(name + " score: " + score + (isPassingScore()?"PASS":"FAIL"));
+
     StringBuilder builder = new StringBuilder();
 
     builder.append("-------------");
@@ -47,19 +58,23 @@ public class Recommendation {
     builder.append(" : ");
     builder.append(email);
     builder.append(" : ");
-    builder.append(score);
+    builder.append(score * POINTS_PER_QUESTION);
+    builder.append(" : ");
+    builder.append(isPassingScore()?"PASS":"FAIL");
     builder.append("\n\n");
 
-    for( int i = 0; i < studyMaterials.size(); i++ ) {
-      StudyMaterial studyMaterial = studyMaterials.get(i);
+    if( isPassingScore() ) {
+      for (int i = 0; i < studyMaterials.size(); i++) {
+        StudyMaterial studyMaterial = studyMaterials.get(i);
 
-      builder.append( studyMaterial!= null ? studyMaterial.toString() : "");
-      builder.append("\n");
+        builder.append(studyMaterial != null ? studyMaterial.toString() : "");
+        builder.append("\n");
 
-      Course course = courses.get(i);
+        Course course = courses.get(i);
 
-      builder.append( course != null ? course.toString() : "" );
-      builder.append("\n");
+        builder.append(course != null ? course.toString() : "");
+        builder.append("\n");
+      }
     }
 
     return builder.toString();
